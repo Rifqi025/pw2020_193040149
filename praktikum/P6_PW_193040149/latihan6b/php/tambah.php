@@ -38,7 +38,7 @@ if (isset($_POST['tambah'])) {
         <input type="text" name="merk_barang" id="merk_barang" required><br><br>
       </li>
       <li>
-        <label for="merk_barang">Jenis Barang : </label><br>
+        <label for="jns_barang">Jenis Barang : </label><br>
         <input type="text" name="jns_barang" id="jns_barang" required><br><br>
       </li>
       <li>

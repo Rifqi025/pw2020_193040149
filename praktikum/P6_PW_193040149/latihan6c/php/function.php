@@ -40,10 +40,10 @@ function tambah($data)
   return mysqli_affected_rows($conn);
 }
 // fungsi untuk menghapus data
-function hapus($kode_barang)
+function hapus($id)
 {
   $conn = koneksi();
-  mysqli_query($conn, "DELETE FROM alat_musik WHERE kode_barang = $kode_barang");
+  mysqli_query($conn, "DELETE FROM alat_musik WHERE kode_barang = $id") or die(mysqli_error($conn));
 
   return mysqli_affected_rows($conn);
 }

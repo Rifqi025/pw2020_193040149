@@ -17,8 +17,11 @@ $alat_musik = query("SELECT * FROM alat_musik");
 </head>
 
 <body>
+<div class="add">
+    <a href="tambah.php"><button>Tambah Data!</button></a>
+  </div>
+  <br><br>
 
-</body>
 <table border="1" cellpadding="13" cellspacing="0">
   <tr>
     <th>#</th>
@@ -48,5 +51,5 @@ $alat_musik = query("SELECT * FROM alat_musik");
   <?php endforeach; ?>
 
 </table>
-
+</body>
 </html>

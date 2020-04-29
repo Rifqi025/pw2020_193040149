@@ -1,7 +1,7 @@
 <?php
 require 'function.php';
 
-$id = $_GET['id'];
+$id = $_GET["id"];
 
 if (hapus($id) > 0) {
   echo "<script>
@@ -14,3 +14,4 @@ if (hapus($id) > 0) {
           document.location.href = 'admin.php';
         </script>";
 }
+?>

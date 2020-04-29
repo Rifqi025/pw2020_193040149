@@ -43,33 +43,31 @@ function tambah($data)
 function hapus($id)
 {
   $conn = koneksi();
-  mysqli_query($conn, "DELETE FROM alat_musik WHERE kode_barang = $id");
+  mysqli_query($conn, "DELETE FROM alat_musik WHERE kode_barang = $id") or die(mysqli_error($conn));
 
   return mysqli_affected_rows($conn);
 }
 
-// fungsi untuk mengubah data 
 function ubah($data)
 {
   $conn = koneksi();
-  $kode_barang = htmlspecialchars($data['kode_barang']);
+  
+  $kode_barang = $data['kode_barang'];
   $foto = htmlspecialchars($data['foto']);
   $merk_barang = htmlspecialchars($data['merk_barang']);
   $jns_barang = htmlspecialchars($data['jns_barang']);
   $bhn_dsr_barang = htmlspecialchars($data['bhn_dsr_barang']);
   $harga_barang = htmlspecialchars($data['harga_barang']);
- 
-  $query = "UPDATE alat_musik
-            SET
-           foto = '$foto',
-           merk_barang = '$merk_barang',
-           jns_barang = '$jns_barang',
-           bhn_dsr_barang = '$bhn_dsr_barang',
-           harga_barang = '$harga_barang',
-           WHERE kode_barang = '$kode_barang'
-           ";
 
-  mysqli_query($conn, $query);
-
+  $query = "UPDATE alat_musik SET
+            foto = '$foto',
+            merk_barang = '$merk_barang', 
+            jns_barang = '$jns_barang', 
+            bhn_dsr_barang = '$bhn_dsr_barang', 
+            harga_barang = '$harga_barang'
+            WHERE kode_barang = $kode_barang";
+  mysqli_query($conn, $query) or die(mysqli_error($conn));
   return mysqli_affected_rows($conn);
 }
+
+?>

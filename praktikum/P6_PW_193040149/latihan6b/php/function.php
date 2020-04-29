@@ -1,4 +1,4 @@
-<<?php
+<?php
 // function untuk melakukan koneksi ke database
 function koneksi()
 {

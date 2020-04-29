@@ -19,7 +19,7 @@ $alat_musik = query("SELECT * FROM alat_musik WHERE kode_barang = $kode_barang")
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Latihan 6a</title>
+    <title>Latihan 6c</title>
 
 </head>
 <body>

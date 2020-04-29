@@ -1,9 +1,9 @@
 <?php
 require 'function.php';
 
-$kode_barang = $_GET["kode_barang"];
+$id = $_GET["id"];
 
-if (hapus($kode_barang) > 0) {
+if (hapus($id) > 0) {
   echo "<script>
           alert('Data Berhasil dihapus!');
           document.location.href = 'admin.php';
