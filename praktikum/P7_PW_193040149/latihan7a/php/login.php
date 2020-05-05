@@ -42,7 +42,7 @@ if (isset($_POST['submit'])) {
     <h3>Form Login</h3>
 <form action="" method="post">
         <?php if (isset($error)) : ?>
-            <p sttyle="color: red; font-style: italic;">Username atau password salah!</p>
+            <p style="color: red; font-style: italic;">Username atau password salah!</p>
         <?php endif; ?>
     <table>
             <tr>
