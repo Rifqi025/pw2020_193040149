@@ -60,8 +60,52 @@ if (isset($_POST['submit'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <style>
+    body {
+        background-color: lightcyan;
+    }
+    .login {
+        background-color: white;
+        width: 350px;
+        padding: 20px;
+        margin: auto;
+        margin-top: 100px;
+        border: 2px solid black;
+        font-size: 18px;
+        border-radius: 5px;
+    }
+    h3 {
+        background-color: orangered;
+        text-align: center;
+        color: white;
+        padding: 10px;
+        border-radius: 7px;
+    }
+
+    table {
+        width: 200px;
+        padding: 12px 10px;
+        box-sizing: border-box;
+        font-size: 18px;
+    }
+    button[type=submit] {
+        background-color: dodgerblue;
+        width: 100%;
+        height: 40px;
+        text-align: center;
+        font-size: 20px;
+        border-radius: 18px;
+        color: white;
+
+    }
+    .remember {
+        color: blue;
+    }
+
+    </style>
 </head>
 <body>
+<div class="login">
     <h3>Form Login</h3>
 <form action="" method="post">
         <?php if (isset($error)) : ?>
@@ -82,12 +126,13 @@ if (isset($_POST['submit'])) {
     <div class="remember">
             <input type="checkbox" name="remember">
             <label for="remember">Remember me</label>
-    </div>        
-    <button type="submit" name="submit">Login</button>
+    </div> 
+    <br>       
+    <button type="submit" name="submit">Log in</button>
     <div>
-            <p >Belum punya akun ? Registrasi <a href="registrasi.php">Disini</a></p>
+            <p >Don't have an account? Register <a href="registrasi.php">Now</a></p>
     </div>     
 </form>
-    
+</div>    
 </body>
 </html>

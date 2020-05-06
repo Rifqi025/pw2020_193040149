@@ -30,24 +30,60 @@ if (isset($_GET['cari'])) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Halaman Admin</title>
-  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  
+  <style>
+    body {
+      background-color: snow;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      
+    }
+
+    .container h3 {
+      text-align: center;
+      width: 100%;
+      margin-top: 90px;
+      margin-bottom: 30px;
+    }
+  </style>
 </head>
 
 <body>
-<div class="logout">
-  <a href="logout.php">Logout</a>
-</div>
-<br>
-<div class="add">
-    <a href="tambah.php"><button>Tambah Data!</button></a>
+
+<!-- Nabvar -->
+<nav class="navbar navbar-dark bg-info fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="../assets/img/klik.png" width="80" height="40" class="d-inline-block align-top" alt="">
+        <strong> Klik Studio Music </strong>
+      </a>
+    </div>
+  </nav>
+
+<div class="container">
+<h3><b> DAFTAR ALAT MUSIK </b></h3>
+<div class="row">
+      <div class="col">
+        <div class="input-group mb-3">
+          <a href="tambah.php" class="btn btn-outline-danger">+ Tambah Data!</a>
+        </div>
+      </div>
+<div class="col-lg-5">
+    <div class="input-group mb-3">
+        <form action="" method="get" class="input-group">
+            <input type="text" class="form-control mr-sm-2" name="keyword" placeholder="Search" autocomplete="off">
+            <div class="input-group-append">
+              <button class="btn btn-outline-primary" type="submit" name="cari">Search!</button>
+            </div>
+          </form>
+      </div>
+    </div>
   </div>
-  <br>
-  <form action="" method="get">
-    <input type="text" name="keyword">
-    <button type="submit" name="cari">Cari!</button>
-  </form>
-  <br>
-<table border="1" cellpadding="13" cellspacing="0">
+  
+  <table class="table table-bordered table-info">
+      <thead class="text-uppercase text-center thead-dark">
   <tr>
     <th>#</th>
     <th>Opsi</th>
@@ -85,5 +121,10 @@ if (isset($_GET['cari'])) {
   <?php endif; ?>
 
 </table>
+<div class="col">
+  <div class="input-group mb-3">
+    <a href="logout.php" class="btn btn-danger">Logout</a>
+  </div>
+</div>
 </body>
 </html>
