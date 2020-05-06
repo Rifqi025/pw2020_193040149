@@ -12,7 +12,7 @@ if (isset($_COOKIE['username']) && isset($_COOKIE['hash'])) {
     $hash = $_COOKIE['hash'];
 
     // ambil username berdasarkan id
-    $result = mysqli_query(kkoneksi(), "SELECT * FROM user WHERE username = '$username'");
+    $result = mysqli_query(koneksi(), "SELECT * FROM user WHERE username = '$username'");
     $row = mysqli_fetch_assoc($result);
 
     // cek cookie dan username
