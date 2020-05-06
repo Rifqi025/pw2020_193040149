@@ -36,8 +36,6 @@ if (isset($_GET['cari'])) {
   <style>
     body {
       background-color: snow;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 400;
       
     }
 
