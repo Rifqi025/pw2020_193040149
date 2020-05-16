@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 05 Bulan Mei 2020 pada 16.50
+-- Waktu pembuatan: 16 Bulan Mei 2020 pada 07.09
 -- Versi server: 10.4.8-MariaDB
 -- Versi PHP: 7.1.33
 
@@ -96,7 +96,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT untuk tabel `alat_musik`
 --
 ALTER TABLE `alat_musik`
-  MODIFY `kode_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `kode_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`
